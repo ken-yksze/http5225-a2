@@ -1,5 +1,7 @@
 # A Basic Vanilla PHP CMS
 
+## Hosted on [InfinityFree](http://http5225-0na-2025-winter-group-5.wuaze.com)
+
 This repository is a simple PHP CMS meant to be used as a starting point. The code consists of a simple login process, a dashboard, a place to view/add/edit/delete users, and a place to view/add/edit/delete projects. In an effort to keep the PHP code focused and basic, only the absolute basics have been included. The whole CMS only consists of HTML, PHP, and SQL.
 
 A few notes regarding the CMS:
