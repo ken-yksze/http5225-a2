@@ -64,8 +64,8 @@ include '../reusable/header-admin.php';
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Quick Actions</h5>
-                    <a href="addMember.php" class="btn btn-admin-primary">Add New Member</a>
-                    <a href="addClass.php" class="btn btn-admin-primary">Add New Class</a>
+                    <a href="addmember.php" class="btn btn-admin-primary">Add New Member</a>
+                    <a href="addclass.php" class="btn btn-admin-primary">Add New Class</a>
                     <a href="manageallocation.php" class="btn btn-admin-primary">Assign Member to Class</a>
                 </div>
             </div>

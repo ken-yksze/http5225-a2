@@ -43,8 +43,10 @@ include '../reusable/header-admin.php';
                         ?>
                     </td>
                     <td>
-                        <a href="updateMember.php?id=<?php echo $row['member_id']; ?>" class="btn btn-admin-primary btn-sm">Edit</a>
-                        <a href="deleteMember.php?id=<?php echo $row['member_id']; ?>" class="btn btn-admin-danger btn-sm" onclick="return confirm('Are you sure you want to delete this member?')">Delete</a>
+                        <a href="updatemember.php?id=<?php echo $row['member_id']; ?>"
+                            class="btn btn-admin-primary btn-sm">Edit</a>
+                        <a href="deletemember.php?id=<?php echo $row['member_id']; ?>" class="btn btn-admin-danger btn-sm"
+                            onclick="return confirm('Are you sure you want to delete this member?')">Delete</a>
                     </td>
                 </tr>
             <?php } ?>
