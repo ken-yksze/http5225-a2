@@ -42,7 +42,7 @@ This is a Content Management System (CMS) for dance classes. It allows users to 
    - Import the database.sql file located in the project root directory into the feel_dance database
 
 5. **Update database configuration:**
-   - Open config.php and update the database configuration with your MySQL username and password
+   - Open .env file and enter your database config
 
 6. **Run the project:**
    - Start your MAMP (or any other local server)
