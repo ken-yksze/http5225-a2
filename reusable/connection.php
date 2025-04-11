@@ -1,6 +1,6 @@
 <?php
 // Connect to the MySQL database
-$env = parse_ini_file('.env');
+$env = parse_ini_file(__DIR__ . '/../.env');
 $DB_HOST = $env["DB_HOST"];
 $DB_USERNAME = $env["DB_USERNAME"];
 $DB_PASSWORD = $env["DB_PASSWORD"];

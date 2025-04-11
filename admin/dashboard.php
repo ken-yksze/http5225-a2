@@ -64,8 +64,8 @@ include '../reusable/header-admin.php';
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Quick Actions</h5>
-                    <a href="addMember.php" class="btn btn-admin-primary mb-2">Add New Member</a>
-                    <a href="addClass.php" class="btn btn-admin-primary mb-2">Add New Class</a>
+                    <a href="addMember.php" class="btn btn-admin-primary">Add New Member</a>
+                    <a href="addClass.php" class="btn btn-admin-primary">Add New Class</a>
                     <a href="manageallocation.php" class="btn btn-admin-primary">Assign Member to Class</a>
                 </div>
             </div>
@@ -76,13 +76,20 @@ include '../reusable/header-admin.php';
                     <h5 class="card-title">Recent Activity</h5>
                     <ul class="list-group">
                         <?php if ($recent_member): ?>
-                            <li class="list-group-item">Last member added: <?php echo $recent_member['name']; ?> at <?php echo $recent_member['created_at']; ?></li>
+                            <li class="list-group-item">Last member added: <?php echo $recent_member['name']; ?> at
+                                <?php echo $recent_member['created_at']; ?>
+                            </li>
                         <?php endif; ?>
                         <?php if ($recent_class): ?>
-                            <li class="list-group-item">Last class created: <?php echo $recent_class['class_name']; ?> at <?php echo $recent_class['class_time']; ?> on <?php echo $recent_class['created_at']; ?></li>
+                            <li class="list-group-item">Last class created: <?php echo $recent_class['class_name']; ?> at
+                                <?php echo $recent_class['class_time']; ?> on <?php echo $recent_class['created_at']; ?>
+                            </li>
                         <?php endif; ?>
                         <?php if ($recent_assignment): ?>
-                            <li class="list-group-item">Last assignment: <?php echo $recent_assignment['member_name']; ?> to <?php echo $recent_assignment['class_name']; ?> at <?php echo $recent_assignment['created_at']; ?></li>
+                            <li class="list-group-item">Last assignment: <?php echo $recent_assignment['member_name']; ?> to
+                                <?php echo $recent_assignment['class_name']; ?> at
+                                <?php echo $recent_assignment['created_at']; ?>
+                            </li>
                         <?php endif; ?>
                     </ul>
                 </div>
