@@ -1,70 +1,70 @@
-<?php
+<?php include('./reusable/header.php'); ?>
 
-include( 'admin/includes/database.php' );
-include( 'admin/includes/config.php' );
-include( 'admin/includes/functions.php' );
-
-?>
-<!doctype html>
-<html>
-<head>
-  
-  <meta charset="UTF-8">
-  <meta http-equiv="Content-type" content="text/html; charset=UTF-8">
-  
-  <title>Website Admin</title>
-  
-  <link href="styles.css" type="text/css" rel="stylesheet">
-  
-  <script src="https://cdn.ckeditor.com/ckeditor5/12.4.0/classic/ckeditor.js"></script>
-  
-</head>
-<body>
-
-  <h1>Welcome to My Website!</h1>
-  <p>This is the website frontend!</p>
-
-  <?php
-
-  $query = 'SELECT *
-    FROM projects
-    ORDER BY date DESC';
-  $result = mysqli_query( $connect, $query );
-
-  ?>
-
-  <p>There are <?php echo mysqli_num_rows($result); ?> projects in the database!</p>
-
-  <hr>
-
-  <?php while($record = mysqli_fetch_assoc($result)): ?>
-
-    <div>
-
-      <h2><?php echo $record['title']; ?></h2>
-      <?php echo $record['content']; ?>
-
-      <?php if($record['photo']): ?>
-
-        <p>The image can be inserted using a base64 image:</p>
-
-        <img src="<?php echo $record['photo']; ?>">
-
-        <p>Or by streaming the image through the image.php file:</p>
-
-        <img src="admin/image.php?type=project&id=<?php echo $record['id']; ?>&width=100&height=100">
-
-      <?php else: ?>
-
-        <p>This record does not have an image!</p>
-
-      <?php endif; ?>
-
+<section class="hero-section text-center">
+    <div class="container">
+        <h1 class="display-4">Welcome to FeelDance</h1>
+        <p class="lead">Discover the joy of movement and express yourself through dance</p>
+        <a href="classes.php" class="btn btn-primary btn-lg">Explore Our Classes</a>
     </div>
+</section>
 
-    <hr>
+<section class="features py-5">
+    <div class="container">
+        <h2 class="text-center section-title">Why Choose FeelDance?</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-music fa-3x mb-3"></i>
+                        <h3 class="card-title">Diverse Styles</h3>
+                        <p class="card-text">From ballet to hip-hop, we offer a wide range of dance styles for all ages and skill levels.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-users fa-3x mb-3"></i>
+                        <h3 class="card-title">Expert Instructors</h3>
+                        <p class="card-text">Learn from passionate and experienced dance instructors who will guide you every step of the way.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-star fa-3x mb-3"></i>
+                        <h3 class="card-title">Performance Opportunities</h3>
+                        <p class="card-text">Showcase your skills in our regular performances and special events throughout the year.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-  <?php endwhile; ?>
+<section class="testimonials">
+    <div class="container">
+        <h2 class="text-center section-title section-title2">What Our Students Say</h2>
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"FeelDance has transformed my life. The instructors are amazing, and I've made great friends here!"</p>
+                        <footer class="blockquote-footer">Sarah, Ballet Student</footer>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-body">
+                        <p class="card-text">"I never thought I could dance, but FeelDance proved me wrong. Now I can't stop dancing!"</p>
+                        <footer class="blockquote-footer">Mike, Hip-Hop Enthusiast</footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-</body>
-</html>
+<?php include('./reusable/footer.php'); ?>
